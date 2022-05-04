@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    background-color:rgb(61, 7, 7);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.main{
+    position: relative;
+}
+.top{
+    padding: 10px;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.timer{
+    border:5px solid white;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.health{
+    height: 40px;
+    background-color: blue;
+    width: 100%;
+}
+.health.player1{
+    border-radius: 25px 0 0 25px;
+}
+.health.player2{
+    border-radius: 0 25px 25px 0;            
+}
+.healthbar{
+    width:100%;
+    height: 100%;
+    background-color: red;
+    padding: 0px;  
+    display: flex;
+    align-items: center;
+}
+.healthbar>h2{
+    margin: 10px;
+}
+.healthbar.player1{
+    float: right;
+    border-radius: 25px 0 0 25px;
+    justify-content: flex-end;
+}
+.healthbar.player2{
+    border-radius: 0 25px 25px 0;
+    justify-content: flex-start;     
+}
+.UI{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2em;
+}
+.UI>h1{
+    color: blue;
+    font-size: 5em;
+    text-transform: uppercase;
+    animation: textColor 5s infinite ease-in-out;
+    text-align: center;
+}
+@keyframes textColor {
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+.UI>button{
+    font-size: 2.5em;
+    padding: 0.5em 1em;
+    border: 0;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(7px);
+}

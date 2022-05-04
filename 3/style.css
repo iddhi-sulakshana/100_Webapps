@@ -1,0 +1,116 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    font-size: 16px;
+    --textPColor: #b6b6b6;
+    --textSColor: #ececec;
+    --bgPColor: #23232e;
+    --bgSColor: #141418;
+}
+body{
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+.light{
+    color: var(--bgSColor);
+    background: var(--textSColor);
+}
+.light nav{
+    background: var(--textPColor    );
+}
+.light .navlink > span{
+    color: var(--bgSColor);
+}
+.light .navlink > svg{
+    fill: var(--bgSColor);
+}
+
+
+
+#black{
+    color: var(--textSColor);
+    background: var(--bgSColor);
+}
+#black nav{
+    background: var(--bgPColor);
+}
+#black .navlink > span{
+    color: var(--textPColor);
+}
+#black .navlink > svg{
+    fill: var(--textPColor);
+}
+
+
+
+
+body::-webkit-scrollbar{
+    width: 0.5rem;
+}
+body::-webkit-scrollbar-track{
+    background: var(--textPColor);
+}
+body::-webkit-scrollbar-thumb{
+    background: var(--bgPColor);
+    border-radius: 1rem;
+}
+main{
+    margin-left: 5rem;
+    padding: 1rem;
+}
+nav{
+    width: 5rem;
+    height: 100vh;
+    position: fixed;
+}
+.navbar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    height: 100%;
+}
+.navitem{
+    width: 100%;
+}
+.navitem:last-child{
+    margin-top: auto;
+}
+.navlink{
+    height: 5rem;
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+}
+.navlink > svg{
+    min-width: 2.5rem;
+    margin: 0rem 1.5rem;
+    transition: all 1s ease;
+}
+.navlink > span{
+    font-size: 2rem;
+    display: none;
+}
+nav:hover{
+    width: 16rem;
+}
+nav:hover .navlink > span{
+    display: block;
+}
+.navitem:hover{
+    background: var(--bgSColor);
+}
+.navitem:hover svg{
+    fill: var(--textSColor)
+}
+.navitem:last-child:hover svg{
+    transform: rotate(360deg);
+}
+.navitem:hover span{
+    color: var(--textSColor);
+}

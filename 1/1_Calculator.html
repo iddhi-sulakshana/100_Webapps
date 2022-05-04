@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>1. Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="back">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="wave">
+            <path fill="#ff0066" fill-opacity="1"
+                d="M0,256L14.1,250.7C28.2,245,56,235,85,208C112.9,181,141,139,169,128C197.6,117,226,139,254,144C282.4,149,311,139,339,160C367.1,181,395,235,424,218.7C451.8,203,480,117,508,106.7C536.5,96,565,160,593,202.7C621.2,245,649,267,678,234.7C705.9,203,734,117,762,90.7C790.6,64,819,96,847,128C875.3,160,904,192,932,197.3C960,203,988,181,1016,165.3C1044.7,149,1073,139,1101,144C1129.4,149,1158,171,1186,186.7C1214.1,203,1242,213,1271,213.3C1298.8,213,1327,203,1355,202.7C1383.5,203,1412,213,1426,218.7L1440,224L1440,320L1425.9,320C1411.8,320,1384,320,1355,320C1327.1,320,1299,320,1271,320C1242.4,320,1214,320,1186,320C1157.6,320,1129,320,1101,320C1072.9,320,1045,320,1016,320C988.2,320,960,320,932,320C903.5,320,875,320,847,320C818.8,320,791,320,762,320C734.1,320,706,320,678,320C649.4,320,621,320,593,320C564.7,320,536,320,508,320C480,320,452,320,424,320C395.3,320,367,320,339,320C310.6,320,282,320,254,320C225.9,320,198,320,169,320C141.2,320,113,320,85,320C56.5,320,28,320,14,320L0,320Z">
+            </path>
+        </svg>
+    </div>
+    <div class="calculator">
+        <input type="text" name="equation" id="Equation" value="" readonly>
+        <input type="text" name="answer" id="Answer" value="0" onkeydown="return keyDown(event)">
+        <div class="buttons">
+            <input type="button" value="CE" style="grid-area: CE;" onclick="ClearAll()" id="ClearAll">
+            <input type="button" value="C" style="grid-area: C;" onclick="Clear()">
+            <input type="button" class="material-icons" value="&#xe14a;" style="grid-area: BACK;" onclick="Back()" id="Back">
+            <input type="button" value="/" style="grid-area: DIV;" onclick="Operator(this)" id="Div">
+            <input type="button" value="7" style="grid-area: SEVEN;" onclick="NumberClick(this)" id="Seven">
+            <input type="button" value="8" style="grid-area: EIGHT;" onclick="NumberClick(this)" id="Eight">
+            <input type="button" value="9" style="grid-area: NINE;" onclick="NumberClick(this)" id="Nine">
+            <input type="button" value="*" style="grid-area: MUL;" onclick="Operator(this)" id="Mul">
+            <input type="button" value="4" style="grid-area: FOUR;" onclick="NumberClick(this)" id="Four">
+            <input type="button" value="5" style="grid-area: FIVE;" onclick="NumberClick(this)" id="Five">
+            <input type="button" value="6" style="grid-area: SIX;" onclick="NumberClick(this)" id="Six">
+            <input type="button" value="-" style="grid-area: SUB;" onclick="Operator(this)" id="Sub">
+            <input type="button" value="1" style="grid-area: ONE;" onclick="NumberClick(this)" id="One">
+            <input type="button" value="2" style="grid-area: TWO;" onclick="NumberClick(this)" id="Two">
+            <input type="button" value="3" style="grid-area: THREE;" onclick="NumberClick(this)" id="Three">
+            <input type="button" value="+" style="grid-area: ADD;" onclick="Operator(this)" id="Add">
+            <input type="button" value="0" style="grid-area: ZERO;" onclick="NumberClick(this)" id="Zero">
+            <input type="button" value="." style="grid-area: DOT;" onclick="NumberClick(this)" id="Dot">
+            <input type="button" value="=" style="grid-area: EQUAL;" onclick="Equal()" id="Equal">
+        </div>
+    </div>
+    <div class="sign">
+        <p class="name">Made by Iddhi S.</p>
+        <p class="assign">For the 100 Webapps</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
